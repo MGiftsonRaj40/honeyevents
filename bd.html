@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+    <style>
+        /* Custom style for transition effect */
+        .transition-opacity {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+      <style>
+        /* Custom style for the modal */
+        .modal-image {
+            max-height: 80vh;
+            max-width: 90vw;
+        }
+    </style>
+</head>
+<body class="bg-black font-serif">  
+    <div class="flex justify-center ">
+        <div class="w-12 bg-slate-900 rounded-3xl " >
+        <img src="src/logo.png" alt="logo" type="png">
+    </div>
+        <div class="text-center text-2xl font-bold text-yellow-300 255 201 71 mt-2">
+            Honey Events
+        </div>
+        </div>
+        <nav class="bg-black mt-8 text-xl">
+            <div class="flex justify-center border-b-4 border-yellow-300">
+                <ul id="navLinks" class="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-24 text-sm md:text-xl border-gray-700 ">
+                    <li>
+                        <a href="index.html" class="nav-link text-white hover:text-yellow-300 hover:underline shadow-yellow-300">Home</a>
+                    </li>
+                    <li class="relative group">
+                        <a href="service.html" class="nav-link text-white hover:text-yellow-300 hover:underline">Services</a>
+                        <ul class="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-black shadow-lg rounded-md opacity-0 group-hover:bg-opacity-100 group-hover:opacity-100 transition-all duration-300 p-2">
+                            <li>
+                                <a href="service.html" class="block whitespace-nowrap text-white hover:text-yellow-300 hover:underline">Corporate Events</a>
+                            </li>
+                            <li>
+                                <a href="bd.html" class="block whitespace-nowrap text-white hover:text-yellow-300 hover:underline">Birthday Events</a>
+                            </li>
+                            <li>
+                                <a href="wed.html" class="block whitespace-nowrap text-white hover:text-yellow-300 hover:underline">Wedding Events</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html" class="nav-link text-white hover:text-yellow-300 hover:underline">About Us</a>
+                    </li>
+                    <li>
+                        <a href="index.html#loc-h" class="nav-link text-white hover:text-yellow-300 hover:underline">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+   
+
+    <!-- Service Section -->
+   
+    
+    <div class="text-black  bg-yellow-300 font-serif font-bold text-center text-2xl mt-20" id="ev">Birthday Event Categories</div>
+    
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+
+<section class="py-12 mx-20">
+    <div class="container mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs md:text-xl whitespace-nowrap">
+            
+            <!-- Service 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/game.jpg" alt="Service 1" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/game.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-10 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold text-black mb-2">Game Stalls</h3>
+                        <ul class="list-disc list-inside text-black">
+                            <li>Balloon Shooting</li>
+                            <li>Mini Golf</li>
+                            <li>Mini Bowling</li>
+                            <li>Snake & Ladder Game</li>
+                            <li>Bouncing Castle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/magic.jpg" alt="Service 2" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/magic.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-10 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold text-black mb-2">Magician</h3>
+                        <ul class="list-disc list-inside text-black">
+                            <li>Magic (supernatural)</li>
+                            <li>Magic (illusion)</li>
+                            <li>Magician (fantasy)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Service 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/theme.jpg" alt="Service 3" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/theme.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-10 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-xl font-bold text-black whitespace-normal mb-2">Birthday Party Theme</h3>
+                        <ul class="list-disc list-inside text-black">
+                            <li>Chotta Bheem</li>
+                            <li>Mottu Patlu</li>
+                            <li>Panda Theme</li>
+                            <li>Ben 10</li>
+                            <li>Princess theme</li>
+                            <li>Krishna & Radhe Theme</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/photo.jpg" alt="Service 4" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/photo.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-10 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold text-black mb-2">Photo Booth</h3>
+                        <ul class="list-disc list-inside text-black">
+                            <li>Selfie Photo Booth</li>
+                            <li>Magic Mirror Photo Booth</li>
+                            <li>Virtual Photo Booth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/Mascot.jpg" alt="Service 5" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/Mascot.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-16 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-3xl font-bold text-black mb-2">Mascots</h3>
+                        <ul class="list-disc list-inside text-black">
+                            <li>Mottu Patlu</li>
+                            <li>Choota Bheem</li>
+                            <li>Elephant</li>
+                            <li>Mickey Mouse</li>
+                            <li>Lion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden group relative">
+                <!-- Image section -->
+                <img src="src/tatoo.jpg" alt="Service 6" class="w-full h-48 md:h-auto object-cover cursor-pointer" onclick="showModal('src/tatoo.jpg')">
+                <!-- Hover Description -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:duration-500 hover:scale-105">
+                    <div class="bg-white px-10 py-16 rounded-md shadow-lg max-w-md">
+                        <h3 class="text-xl md:text-2xl ml-4 font-bold text-black mb-2 whitespace-normal ">Tattoo/ Caricature</h3>
+                        <ul class="list-disc list-inside text-black ml-4">
+                            <li>Aliens Tattoo</li>
+                            <li>Doll Tattoo</li>
+                            <li>Ben 10 Tattoo</li>
+                            <li class="whitespace-normal text-balance">Pencil Drawing (Caricature)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<hr class="h-px mt-12 -mb-5 bg-yellow-300 border-0 dark:bg-gray-700">
+<footer class="bg-slate-800 text-yellow-300 p-4 mt-5">
+    <div class="container mx-auto flex justify-between items-center">
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+        <div class="flex space-x-4">
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/_honey.events?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 3h9a4.5 4.5 0 014.5 4.5v9a4.5 4.5 0 01-4.5 4.5h-9A4.5 4.5 0 013 16.5v-9A4.5 4.5 0 017.5 3z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0zm1.5-4.87h.01" />
+                </svg>
+            </a>
+            <!-- Mail Icon -->
+            <a href="honeyevents.chennai@gmail.com" aria-label="Mail">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 3.75h-9a4.5 4.5 0 00-4.5 4.5v9a4.5 4.5 0 004.5 4.5h9a4.5 4.5 0 004.5-4.5v-9a4.5 4.5 0 00-4.5-4.5z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7.5l9 6 9-6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+</html>
